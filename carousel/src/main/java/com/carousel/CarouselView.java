@@ -3,6 +3,7 @@ package com.carousel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Timer;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,6 +13,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;
@@ -519,7 +521,10 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
         CarouselItemHolder child = (CarouselItemHolder) getAdapter().getView(0, null, null);
 
         if (child.getWidth() > 0)
+            //mCarouselDiameter = getMeasuredWidth();
             mCarouselDiameter = Math.min(getMeasuredWidth(), child.getWidth() * 2);
+
+        Log.d(this.getClass().getName(), "CAROUSEL_DIAMETER:" + mCarouselDiameter);
 
         int count = getAdapter().getCount();
         float angleUnit = 360.0f / count;

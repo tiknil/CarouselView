@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 
 /**
  * Defines configuration {@link CarouselOptions} for a {@link CarouselView}.
@@ -247,7 +248,7 @@ public final class CarouselOptions {
         mMaxQuantity = max > CarouselConfigInfo.MAX_QUANTITY ? CarouselConfigInfo.MAX_QUANTITY
                 : max;
         if (arr.length() < mMinQuantity || arr.length() > mMaxQuantity)
-            throw new IllegalArgumentException("Invalid set of items.");
+            //throw new IllegalArgumentException("Invalid set of items.");
 
         mMaxScrollingVelocity = arr.getInt(R.styleable.Carousel_maxScrollingVelocity,
                 CarouselConfigInfo.MAX_SCROLLING_VELOCITY);

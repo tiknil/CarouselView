@@ -133,6 +133,7 @@ abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         mSpinnerPadding.bottom = getPaddingBottom() > mSelectionBottomPadding ? getPaddingBottom()
                 : mSelectionBottomPadding;
 
+
         if (mDataChanged) {
             handleDataChanged();
         }

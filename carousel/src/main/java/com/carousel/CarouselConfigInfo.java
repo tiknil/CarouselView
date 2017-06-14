@@ -21,23 +21,23 @@ class CarouselConfigInfo {
     /**
      * Set diameter distortion, 1.0 = perfect circle
      */
-    static final float DIAMETER_SCALE = 0.4f;
+    static final float DIAMETER_SCALE = 0.3f;
     
     /**
      * Rate to shrink objects as they appear further back in the depth field. Typical values 1.0,
      * linear, 2.0 twice as fast.
      */
-    static  final float DEPTH_SCALE = 0.8f;
+    static  final float DEPTH_SCALE = 1.7f;
     
     /**
      * Tilt angle, negative lifts up back, positive lowers back.
      */
-    static float TILT = -0.3f;  
+    static float TILT = 0.0f;
     
     /**
      * Limit depth scale used to shrink far objects to not fall below this minimum scale.
      */
-    static final float MIN_SCALE = 0.4f;        
+    static final float MIN_SCALE = 0.2f;
     
     /**
      * Max velocity for scrolling.
